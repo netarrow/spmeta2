@@ -20,7 +20,7 @@ namespace SPMeta2.Services.Impl
 
         public DefaultIncrementalModelTreeTraverseService()
         {
-            _hashService = new MD5HashCodeServiceBase();
+            _hashService = ServiceContainer.Instance.GetService<HashCodeServiceBase>();
 
             CurrentModelHash = new ModelHash();
             IgnoredModelNodes = new List<ModelNode>();

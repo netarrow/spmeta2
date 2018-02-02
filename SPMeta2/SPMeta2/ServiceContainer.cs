@@ -32,6 +32,8 @@ namespace SPMeta2
             // service
             RegisterService(typeof(TraceServiceBase), new TraceSourceService());
 
+            RegisterService(typeof(HashCodeServiceBase), new MD5HashCodeServiceBase());
+
             RegisterService(typeof(ModelTreeTraverseServiceBase), new DefaultModelTreeTraverseService());
             RegisterService(typeof(ModelWeighServiceBase), new DefaultModelWeighService());
 
